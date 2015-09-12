@@ -1,0 +1,32 @@
+{
+  "name": "joyful-jewels",
+  "version": "0.0.0",
+  "description": "Digital frame application to play automatic slideshows of your pictures",
+  "main": "dist/index.html",
+  "node-main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/almilo/joyful-jewels.git"
+  },
+  "keywords": [
+    "automatic",
+    "slideshow",
+    "digital",
+    "frame",
+    "pictures",
+    "gallery"
+  ],
+  "author": "Alberto Mijares <almilo@almilo.es>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/almilo/joyful-jewels/issues"
+  },
+  "homepage": "https://github.com/almilo/joyful-jewels",
+  "dependencies": {
+    "glob": "^5.0.14",
+    "lodash": "^3.10.1"
+  },
+  "window": {
+    "kiosk": true
+  }
+}
