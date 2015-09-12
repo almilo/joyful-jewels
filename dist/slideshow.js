@@ -1,28 +1,30 @@
-var sbSlider = document.getElementById('sb-slider'), batchSize = 10;
+var slideshow = document.getElementById('slideshow'), batchSize = 10;
 
 process.mainModule.exports.getPictures(batchSize).forEach(addToSlider);
 
 function addToSlider(picture) {
-    var liElement = document.createElement('li'), imgElement = document.createElement('img');
+    var divElement = document.createElement('div'), imgElement = document.createElement('img');
 
     imgElement.setAttribute('src', picture);
     imgElement.setAttribute('width', '1024px');
     imgElement.setAttribute('height', '768px');
-    liElement.appendChild(imgElement);
-    sbSlider.appendChild(liElement);
+    divElement.appendChild(imgElement);
+    slideshow.appendChild(divElement);
 }
 
 $(function () {
-    var times = 0,
-        slicebox = $('#sb-slider').slicebox({
-            orientation: 'r',
-            cuboidsRandom: true,
-            disperseFactor: 30
-        });
+    var times = 0;
+
+    $('#slideshow > div:gt(0)').hide();
 
     setInterval(function () {
         if (times < batchSize) {
-            slicebox.next();
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
             times++;
         } else {
             location.reload();
