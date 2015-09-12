@@ -1,6 +1,6 @@
 {
   "name": "joyful-jewels",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Digital frame application to play automatic slideshows of your pictures",
   "main": "dist/index.html",
   "node-main": "dist/index.js",
